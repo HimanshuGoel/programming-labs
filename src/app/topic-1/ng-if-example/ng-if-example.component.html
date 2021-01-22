@@ -1,0 +1,30 @@
+<div *ngIf="condition">
+    This DIV is displayed when "condition" is true
+</div>
+
+<ng-template [ngIf]="condition">
+    <div>This DIV is displayed when "condition" is true</div>
+</ng-template>
+
+<div *ngIf="condition; else elseBlock">
+    Content to render when condition is true.
+</div>
+
+<ng-template #elseBlock>
+    Content to render when condition is false.
+</ng-template>
+
+<div *ngIf="condition; then thenBlock else elseBlock2"></div>
+<ng-template #thenBlock>
+    Content to render when condition is true.
+</ng-template>
+<ng-template #elseBlock2>
+    Content to render when condition is false.
+</ng-template>
+
+<div *ngIf="userObservable$ | async as user; else loading">
+    Hello {{user.last}}, {{user.first}}
+</div>
+<ng-template #loading>
+    Loading user info...
+</ng-template>

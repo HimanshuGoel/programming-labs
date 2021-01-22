@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "programming-labs"
+  "defaultProject": "programming-labs",
+  "cli": {
+    "analytics": "d06c1d9f-f89e-4558-88ee-9b178bb97230"
+  }
 }
