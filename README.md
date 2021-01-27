@@ -29,3 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Covered Concepts
 
 1. 5 different syntax of *ngIf - <https://blog.angulartraining.com/5-different-syntax-options-for-ngif-3408dd9050c>
+
+2. Typed Version of SimpleChanges - <https://netbasal.com/create-a-typed-version-of-simplechanges-in-angular-451f86593003>
