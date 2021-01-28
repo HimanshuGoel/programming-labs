@@ -1,0 +1,6 @@
+<button *ngFor="let item of items; index as index" [style.--animation-delay]="index * 0.2 + 's'">
+    {{ item }}
+</button>
+
+
+<h1 [style.--color]="color">CSS vars works!</h1>
