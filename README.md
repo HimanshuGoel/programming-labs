@@ -33,3 +33,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 2. Typed Version of SimpleChanges - <https://netbasal.com/create-a-typed-version-of-simplechanges-in-angular-451f86593003>
 
 3. Binding CSS Variables in the template - <https://netbasal.com/binding-css-variables-in-angular-69dfd4136e21>
+
+4. Countdown Timer with RxJS - <https://medium.com/javascript-in-plain-english/implement-a-countdown-timer-with-rxjs-in-angular-3852f21a4ea0>
