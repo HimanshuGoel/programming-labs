@@ -35,3 +35,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3. Binding CSS Variables in the template - <https://netbasal.com/binding-css-variables-in-angular-69dfd4136e21>
 
 4. Countdown Timer with RxJS - <https://medium.com/javascript-in-plain-english/implement-a-countdown-timer-with-rxjs-in-angular-3852f21a4ea0>
+
+5.5 Useful Jasmine Matchers for Easier Expectations - <https://medium.com/better-programming/5-useful-jasmine-and-jest-matchers-for-easier-expectations-in-javascript-tests-98acd31e443e>
