@@ -8,6 +8,8 @@ import { TypedSimpleChangesComponent } from './topic-2/typed-simple-changes/type
 import { BindingCssVariableComponent } from './topic-3/binding-css-variable/binding-css-variable.component';
 import { CountdownTimerComponent } from './topic-4/countdown-timer/countdown-timer.component';
 import { JasmineMatchersComponent } from './topic-5/jasmine-matchers/jasmine-matchers.component';
+import { GhostTableAnimationComponent } from './topic-6/ghost-table-animation/ghost-table-animation.component';
+import { HotToastComponent } from './topic-7/hot-toast/hot-toast.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { JasmineMatchersComponent } from './topic-5/jasmine-matchers/jasmine-mat
     TypedSimpleChangesComponent,
     BindingCssVariableComponent,
     CountdownTimerComponent,
-    JasmineMatchersComponent
+    JasmineMatchersComponent,
+    GhostTableAnimationComponent,
+    HotToastComponent
   ],
   imports: [
     BrowserModule,

@@ -36,4 +36,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 4. Countdown Timer with RxJS - <https://medium.com/javascript-in-plain-english/implement-a-countdown-timer-with-rxjs-in-angular-3852f21a4ea0>
 
-5.5 Useful Jasmine Matchers for Easier Expectations - <https://medium.com/better-programming/5-useful-jasmine-and-jest-matchers-for-easier-expectations-in-javascript-tests-98acd31e443e>
+5. 5 Useful Jasmine Matchers for Easier Expectations - <https://medium.com/better-programming/5-useful-jasmine-and-jest-matchers-for-easier-expectations-in-javascript-tests-98acd31e443e>
+
+6. Ghost Table Animation - <https://levelup.gitconnected.com/how-to-add-ghost-animations-to-your-angular-table-3d665575a144>
+
+7. Hot Toast - <https://netbasal.com/introducing-angular-hot-toast-the-best-angular-toast-in-town-1e3a8ede424e>
