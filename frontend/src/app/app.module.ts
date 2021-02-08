@@ -10,6 +10,7 @@ import { CountdownTimerComponent } from './topic-4/countdown-timer/countdown-tim
 import { JasmineMatchersComponent } from './topic-5/jasmine-matchers/jasmine-matchers.component';
 import { GhostTableAnimationComponent } from './topic-6/ghost-table-animation/ghost-table-animation.component';
 import { HotToastComponent } from './topic-7/hot-toast/hot-toast.component';
+import { IterateStringEnumComponent } from './topic-8/iterate-string-enum/iterate-string-enum.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HotToastComponent } from './topic-7/hot-toast/hot-toast.component';
     CountdownTimerComponent,
     JasmineMatchersComponent,
     GhostTableAnimationComponent,
-    HotToastComponent
+    HotToastComponent,
+    IterateStringEnumComponent
   ],
   imports: [
     BrowserModule,

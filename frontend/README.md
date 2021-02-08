@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Covered Concepts
 
-1. 5 different syntax of *ngIf - <https://blog.angulartraining.com/5-different-syntax-options-for-ngif-3408dd9050c>
+1. 5 different syntax of \*ngIf - <https://blog.angulartraining.com/5-different-syntax-options-for-ngif-3408dd9050c>
 
 2. Typed Version of SimpleChanges - <https://netbasal.com/create-a-typed-version-of-simplechanges-in-angular-451f86593003>
 
@@ -41,3 +41,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 6. Ghost Table Animation - <https://levelup.gitconnected.com/how-to-add-ghost-animations-to-your-angular-table-3d665575a144>
 
 7. Hot Toast - <https://netbasal.com/introducing-angular-hot-toast-the-best-angular-toast-in-town-1e3a8ede424e>
+
+8. Iterating on a TypeScript string enum - <https://medium.com/javascript-in-plain-english/iterating-on-a-typescript-string-enum-45f7e36b015b>
