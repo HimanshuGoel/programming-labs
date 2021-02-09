@@ -1,0 +1,9 @@
+<h3> Unit conversion pipe(km to m)</h3>
+<p>
+    <label for="kilometer">Km</label> &nbsp;&nbsp;
+    <input [(ngModel)]="km" name="km" type="number" id="km" />
+</p>
+<p>
+    <label for="meter">M</label> &nbsp;
+    <span> {{km | unitConverter}} </span>
+</p>

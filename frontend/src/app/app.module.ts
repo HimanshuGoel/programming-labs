@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { JasmineMatchersComponent } from './topic-5/jasmine-matchers/jasmine-mat
 import { GhostTableAnimationComponent } from './topic-6/ghost-table-animation/ghost-table-animation.component';
 import { HotToastComponent } from './topic-7/hot-toast/hot-toast.component';
 import { IterateStringEnumComponent } from './topic-8/iterate-string-enum/iterate-string-enum.component';
+import { UnitConverterPipe } from './topic-9/unit-converter.pipe';
+import { UnitConverterComponent } from './topic-9/unit-converter/unit-converter.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { IterateStringEnumComponent } from './topic-8/iterate-string-enum/iterat
     JasmineMatchersComponent,
     GhostTableAnimationComponent,
     HotToastComponent,
-    IterateStringEnumComponent
+    IterateStringEnumComponent,
+    UnitConverterPipe,
+    UnitConverterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
