@@ -45,3 +45,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 8. Iterating on a TypeScript string enum - <https://medium.com/javascript-in-plain-english/iterating-on-a-typescript-string-enum-45f7e36b015b>
 
 9. Unit Converter Pipe - <https://medium.com/javascript-in-plain-english/how-to-create-a-unit-converter-pipe-in-angular-eea9b7201402>
+
+10. InjectionToken Factory Functions - <https://netbasal.com/the-hidden-power-of-injectiontoken-factory-functions-in-angular-d42d5575859b>

@@ -14,6 +14,7 @@ import { HotToastComponent } from './topic-7/hot-toast/hot-toast.component';
 import { IterateStringEnumComponent } from './topic-8/iterate-string-enum/iterate-string-enum.component';
 import { UnitConverterPipe } from './topic-9/unit-converter.pipe';
 import { UnitConverterComponent } from './topic-9/unit-converter/unit-converter.component';
+import { InjectionTokenFactoryComponent } from './topic-10/injection-token-factory/injection-token-factory.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { UnitConverterComponent } from './topic-9/unit-converter/unit-converter.
     HotToastComponent,
     IterateStringEnumComponent,
     UnitConverterPipe,
-    UnitConverterComponent
+    UnitConverterComponent,
+    InjectionTokenFactoryComponent
   ],
   imports: [
     BrowserModule,
