@@ -47,3 +47,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 9. Unit Converter Pipe - <https://medium.com/javascript-in-plain-english/how-to-create-a-unit-converter-pipe-in-angular-eea9b7201402>
 
 10. InjectionToken Factory Functions - <https://netbasal.com/the-hidden-power-of-injectiontoken-factory-functions-in-angular-d42d5575859b>
+
+11. Autofocus - <https://netbasal.com/autofocus-that-works-anytime-in-angular-apps-68cb89a3f057>

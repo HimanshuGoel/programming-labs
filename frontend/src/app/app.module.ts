@@ -15,6 +15,8 @@ import { IterateStringEnumComponent } from './topic-8/iterate-string-enum/iterat
 import { UnitConverterPipe } from './topic-9/unit-converter.pipe';
 import { UnitConverterComponent } from './topic-9/unit-converter/unit-converter.component';
 import { InjectionTokenFactoryComponent } from './topic-10/injection-token-factory/injection-token-factory.component';
+import { AutofocusDirective } from './topic-11/autofocus.directive';
+import { AutofocusComponent } from './topic-11/autofocus/autofocus.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { InjectionTokenFactoryComponent } from './topic-10/injection-token-facto
     IterateStringEnumComponent,
     UnitConverterPipe,
     UnitConverterComponent,
-    InjectionTokenFactoryComponent
+    InjectionTokenFactoryComponent,
+    AutofocusDirective,
+    AutofocusComponent
   ],
   imports: [
     BrowserModule,
