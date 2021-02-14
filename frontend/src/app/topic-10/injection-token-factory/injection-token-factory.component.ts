@@ -8,8 +8,13 @@ import {
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { pluck, distinctUntilChanged, filterNil } from 'rxjs/operators';
+import { pluck, distinctUntilChanged } from 'rxjs/operators';
+
+import { filterNil } from '@datorama/akita';
+
 import { ThemeService } from '../theme.service';
+
+import { untilDestroyed } from '@ngneat/until-destroy';
 
 const WINDOW = new InjectionToken<Window>('A reference to the window object', {
   factory: () => window,
@@ -24,7 +29,8 @@ export const TIMESPAN = new InjectionToken(
 
       return activatedRoute.queryParams.pipe(
         pluck('timespan'),
-        filterNil(),
+        // TODO: need to check proper fix for using filterNil() operator
+        // filterNil(),
         distinctUntilChanged()
       );
     },

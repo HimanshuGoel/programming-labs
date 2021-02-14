@@ -14,6 +14,8 @@ export class AutofocusComponent implements OnInit {
     }
   }
 
+  public show: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}

@@ -17,6 +17,7 @@ import { UnitConverterComponent } from './topic-9/unit-converter/unit-converter.
 import { InjectionTokenFactoryComponent } from './topic-10/injection-token-factory/injection-token-factory.component';
 import { AutofocusDirective } from './topic-11/autofocus.directive';
 import { AutofocusComponent } from './topic-11/autofocus/autofocus.component';
+import { GanttChartComponent } from './topic-12/gantt-chart/gantt-chart.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AutofocusComponent } from './topic-11/autofocus/autofocus.component';
     UnitConverterComponent,
     InjectionTokenFactoryComponent,
     AutofocusDirective,
-    AutofocusComponent
+    AutofocusComponent,
+    GanttChartComponent
   ],
   imports: [
     BrowserModule,
