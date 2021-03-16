@@ -50,6 +50,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 11. Autofocus - <https://netbasal.com/autofocus-that-works-anytime-in-angular-apps-68cb89a3f057>
 
-12. Angular Debug Tools to measure change detection cycle time - <https://phamhuuhien.medium.com/how-to-turn-on-angular-debug-tools-to-measure-change-detection-cycle-time-dc6d87405302>
+12. Create a Gantt chart <https://medium.com/koverhoop/how-to-create-a-gantt-chart-in-angular-149f850fa1a8>
+
+13. Angular Debug Tools to measure change detection cycle time - <https://phamhuuhien.medium.com/how-to-turn-on-angular-debug-tools-to-measure-change-detection-cycle-time-dc6d87405302>
     - ng.profiler.timeChangeDetection();
     - ng.profiler.timeChangeDetection({ record: true }); - on chrome javascript profiler

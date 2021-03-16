@@ -18,7 +18,6 @@ import { InjectionTokenFactoryComponent } from './topic-10/injection-token-facto
 import { AutofocusDirective } from './topic-11/autofocus.directive';
 import { AutofocusComponent } from './topic-11/autofocus/autofocus.component';
 import { GanttChartComponent } from './topic-12/gantt-chart/gantt-chart.component';
-import { PortalComponent } from './topic-13/portal/portal.component';
 
 @NgModule({
   declarations: [
@@ -37,14 +36,9 @@ import { PortalComponent } from './topic-13/portal/portal.component';
     AutofocusDirective,
     AutofocusComponent,
     GanttChartComponent,
-    PortalComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
