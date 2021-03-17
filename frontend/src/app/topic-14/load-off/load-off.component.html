@@ -1,0 +1,22 @@
+<button>
+    Add
+    <spinner *ngIf="loader.add.inProgress$ | async"></spinner>
+</button>
+
+<button>
+    Edit
+    <spinner *ngIf="loader.edit.inProgress$ | async"></spinner>
+</button>
+
+<button>
+    Delete
+    <spinner *ngIf="loader.delete.inProgress$ | async"></spinner>
+</button>
+
+<ng-container *subscribe="users$; let state">
+    <p *ngIf="state.loading">Loading....</p>
+    <p *ngIf="state.error">Error</p>
+    <p *ngIf="state.res">
+      {{ state.res | json }}
+    </p>
+  </ng-container>

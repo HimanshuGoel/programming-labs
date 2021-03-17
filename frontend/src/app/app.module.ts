@@ -18,7 +18,8 @@ import { InjectionTokenFactoryComponent } from './topic-10/injection-token-facto
 import { AutofocusDirective } from './topic-11/autofocus.directive';
 import { AutofocusComponent } from './topic-11/autofocus/autofocus.component';
 import { GanttChartComponent } from './topic-12/gantt-chart/gantt-chart.component';
-
+import { LoadOffComponent } from './topic-14/load-off/load-off.component';
+import { SubscribeModule } from '@ngneat/subscribe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,8 +37,9 @@ import { GanttChartComponent } from './topic-12/gantt-chart/gantt-chart.componen
     AutofocusDirective,
     AutofocusComponent,
     GanttChartComponent,
+    LoadOffComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, SubscribeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

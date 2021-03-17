@@ -55,3 +55,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 13. Angular Debug Tools to measure change detection cycle time - <https://phamhuuhien.medium.com/how-to-turn-on-angular-debug-tools-to-measure-change-detection-cycle-time-dc6d87405302>
     - ng.profiler.timeChangeDetection();
     - ng.profiler.timeChangeDetection({ record: true }); - on chrome javascript profiler
+14. Loading Indicators in Angular using loadoff <https://netbasal.com/take-a-load-off-your-mind-and-let-loadoff-cleanly-handle-your-loading-indicators-in-angular-d95b6490e19c>
