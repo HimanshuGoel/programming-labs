@@ -56,3 +56,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     - ng.profiler.timeChangeDetection();
     - ng.profiler.timeChangeDetection({ record: true }); - on chrome javascript profiler
 14. Loading Indicators in Angular using loadoff <https://netbasal.com/take-a-load-off-your-mind-and-let-loadoff-cleanly-handle-your-loading-indicators-in-angular-d95b6490e19c>
+
+15. Find the change detection bottle-necks - <https://itnext.io/heres-how-to-find-the-change-detection-bottle-necks-in-your-angular-application-333a7175847>

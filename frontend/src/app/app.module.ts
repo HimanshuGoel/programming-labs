@@ -20,6 +20,7 @@ import { AutofocusComponent } from './topic-11/autofocus/autofocus.component';
 import { GanttChartComponent } from './topic-12/gantt-chart/gantt-chart.component';
 import { LoadOffComponent } from './topic-14/load-off/load-off.component';
 import { SubscribeModule } from '@ngneat/subscribe';
+import { ChangeDetectionBottleNecksComponent } from './topic-15/change-detection-bottle-necks/change-detection-bottle-necks.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { SubscribeModule } from '@ngneat/subscribe';
     AutofocusComponent,
     GanttChartComponent,
     LoadOffComponent,
+    ChangeDetectionBottleNecksComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, SubscribeModule],
   providers: [],
