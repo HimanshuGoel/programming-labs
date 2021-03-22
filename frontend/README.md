@@ -58,3 +58,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 14. Loading Indicators in Angular using loadoff <https://netbasal.com/take-a-load-off-your-mind-and-let-loadoff-cleanly-handle-your-loading-indicators-in-angular-d95b6490e19c>
 
 15. Find the change detection bottle-necks - <https://itnext.io/heres-how-to-find-the-change-detection-bottle-necks-in-your-angular-application-333a7175847>
+
+16. Import via Absolute Paths - <https://jacobneterer.medium.com/import-via-absolute-paths-in-angular-fc4146bf2330>
+

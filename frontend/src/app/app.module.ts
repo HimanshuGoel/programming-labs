@@ -21,6 +21,7 @@ import { GanttChartComponent } from './topic-12/gantt-chart/gantt-chart.componen
 import { LoadOffComponent } from './topic-14/load-off/load-off.component';
 import { SubscribeModule } from '@ngneat/subscribe';
 import { ChangeDetectionBottleNecksComponent } from './topic-15/change-detection-bottle-necks/change-detection-bottle-necks.component';
+import { AbsolutePathsComponent } from './topic-16/absolute-paths/absolute-paths.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { ChangeDetectionBottleNecksComponent } from './topic-15/change-detection
     GanttChartComponent,
     LoadOffComponent,
     ChangeDetectionBottleNecksComponent,
+    AbsolutePathsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, SubscribeModule],
   providers: [],
