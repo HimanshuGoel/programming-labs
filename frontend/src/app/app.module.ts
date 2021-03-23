@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { LoadOffComponent } from './topic-14/load-off/load-off.component';
 import { SubscribeModule } from '@ngneat/subscribe';
 import { ChangeDetectionBottleNecksComponent } from './topic-15/change-detection-bottle-necks/change-detection-bottle-necks.component';
 import { AbsolutePathsComponent } from './topic-16/absolute-paths/absolute-paths.component';
+import { PreventSubscriptionMemoryLeaksComponent } from './topic-17/prevent-subscription-memory-leaks/prevent-subscription-memory-leaks.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,8 +44,15 @@ import { AbsolutePathsComponent } from './topic-16/absolute-paths/absolute-paths
     LoadOffComponent,
     ChangeDetectionBottleNecksComponent,
     AbsolutePathsComponent,
+    PreventSubscriptionMemoryLeaksComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, SubscribeModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    SubscribeModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
