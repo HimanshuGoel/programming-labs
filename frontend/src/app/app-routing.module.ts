@@ -16,6 +16,13 @@ const routes: Routes = [
         (m) => m.LabTwoContainerModule
       ),
   },
+  {
+    path: 'lab-three',
+    loadChildren: () =>
+      import('./lab-three-container/lab-three-container.module').then(
+        (m) => m.LabThreeContainerModule
+      ),
+  },
   { path: '', redirectTo: '/lab-one', pathMatch: 'full' },
   { path: '**', redirectTo: '' },
 ];
