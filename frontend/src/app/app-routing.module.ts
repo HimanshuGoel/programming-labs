@@ -16,6 +16,7 @@ const routes: Routes = [
         (m) => m.LabTwoContainerModule
       ),
   },
+  { path: '', redirectTo: '/lab-one', pathMatch: 'full' },
   { path: '**', redirectTo: '' },
 ];
 
