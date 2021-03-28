@@ -5,10 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { LabOneContainerComponent } from './lab-one-container/lab-one-container.component';
 @NgModule({
-  declarations: [AppComponent, LabOneContainerComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

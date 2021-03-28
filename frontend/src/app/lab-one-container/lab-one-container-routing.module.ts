@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LabOneContainerComponent } from './lab-one-container.component';
+import { LabOneContainerComponent } from '../lab-one-container/lab-one-container.component';
 
 const routes: Routes = [{
     path: '',
