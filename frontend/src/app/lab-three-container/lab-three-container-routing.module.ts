@@ -1,12 +1,14 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LabThreeContainerComponent } from '../lab-three-container/lab-three-container.component';
+import { PathNotFoundComponent } from '../path-not-found/path-not-found.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LabThreeContainerComponent
+    component: LabThreeContainerComponent, pathMatch: 'full'
   },
+  { path: '**', component: PathNotFoundComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
