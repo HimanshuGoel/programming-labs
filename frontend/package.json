@@ -31,6 +31,7 @@
     "rxjs": "~6.6.0",
     "save": "^2.4.0",
     "tslib": "^2.0.0",
+    "xng-breadcrumb": "^6.6.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

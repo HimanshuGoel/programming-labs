@@ -1,0 +1,12 @@
+<xng-breadcrumb [separator]="iconTemplate"></xng-breadcrumb>
+<ng-template #iconTemplate>
+    <mat-icon>chevron_right</mat-icon>
+</ng-template>
+
+<ul>
+    <li>
+        <a [routerLink]="['./child-one']" routerLinkActive="router-link-active" >child-one</a>
+    </li>
+</ul>
+
+<router-outlet></router-outlet>
