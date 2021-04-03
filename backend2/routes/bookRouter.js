@@ -1,34 +1,13 @@
 const express = require('express');
+const booksController = require('../controllers/booksController')
 
 function routes(Book) {
   const bookRouter = express.Router();
-  bookRouter.route('/books')
-    .post((req, res) => {
-      const body = req.body;
-      const newBook = {
-        title: body
-      }
-      res.status(201).json(newBook)
-    })
-    .get((req, res) => {
-      const { query } = req;
-      const books = [{
-        title: query
-      }]
+  const controller = booksController({})
 
-      // implementing HATEOAS self-documentation
-      const returnBooks = books.map((book) => {
-        const newBook = book.toJSON();
-        newBook.links = {};
-        newBook.links.self = `http://${req.headers.host}/api/books/${book._id}`
-        newBook.links.filterByThisGenre = `http://${req.headers.host}/api/books?genre=${req.book.genre}`
-        return newBook;
-      })
-      const response = {
-        books: returnBooks
-      }
-      res.json(response)
-    })
+  bookRouter.route('/books')
+    .post(controller.post)
+    .get(controller.get)
 
   bookRouter.use('/books/:bookId', (req, res, next) => {
     if (req.params.bookId) {
