@@ -1,21 +1,20 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 
-const Book = require('./models/book-model')
-const bookRouter = require('./routes/bookRouter.js')(Book)
+const Book = require('./models/book-model');
+const bookRouter = require('./routes/book-router.js')(Book);
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json());
-app.use('/api', bookRouter)
+app.use(express.urlencoded());
+app.use(express.json());
+app.use('/api', bookRouter);
 
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.send('welcome to my api!')
+    res.send('Welcome to Programming Labs API.');
 });
 
 app.server = app.listen(port, () => {
-  console.log('running on port ' + port)
+    console.log(`Running on port ${port}`);
 });

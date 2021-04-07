@@ -1,9 +1,10 @@
 // Node.js getting started
+
+//Working with classes
 class Person {
     constructor(name) {
         this.name = name
     }
-
     greet() {
         console.log(`hello ${this.name}`)
     }
@@ -14,7 +15,6 @@ class Student extends Person {
         this.name = name;
         this.level = level;
     }
-
     greet() {
         console.log(`hello ${this.name} from ${this.level}`)
     }
@@ -30,13 +30,13 @@ o1.greet();
 o2.greet();
 o3.greet();
 
+// Working with async-await
 (async function read() {
     const data = await fetch('http://google.com');
-
     console.log(data.length)
 })();
 
-// using event emitter
+// Working with event emitter
 const EventEmitter = require('events');
 
 const myEmitter = new EventEmitter();
@@ -47,17 +47,10 @@ myEmitter.on('TEST_EVENT', () => {
 
 myEmitter.emit('TEST_EVENT')
 
-
-
-
-
-// working with the operating system
+// Working with the operating system
 const os = require('os')
-
 console.log('OS platform', os.platform())
 console.log('OS CPU architecture', os.arch())
 console.log('Number of CPU logical cores', os.cpus().length)
 console.log('Home directory for current user', os.homedir())
 console.log('line1' + os.EOL + 'line2' + os.EOL + 'line3')
-
-

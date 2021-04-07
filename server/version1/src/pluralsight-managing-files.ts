@@ -1,8 +1,9 @@
-import http from 'http';
-import url from 'url';
-import jsonBody from 'body/json';
-import formidable = require('formidable');
-
+// Managing Files with Node.js
+const http = require('http');
+const url = require('url');
+const jsonBody = require('body/json');
+const formidable = require('formidable');
+const buffer = require('buffer').Buffer;
 const server = http.createServer();
 
 server.on('request', (request: any, response: any) => {
@@ -23,12 +24,12 @@ server.on('request', (request: any, response: any) => {
       body.push(chunk);
     })
     .on('end', () => {
-      const parsedJSON = JSON.parse(Buffer.concat(body));
+      const parsedJSON = JSON.parse(buffer.concat(body));
       const userName = parsedJSON[0].userName;
       console.log(userName);
     });
 
-  // using jsonBody to get the body from request
+  // Using jsonBody to get the body from request
   jsonBody(request, response, (err: any, body: any) => {
     if (err) {
       console.log(err);
@@ -37,13 +38,13 @@ server.on('request', (request: any, response: any) => {
     }
   });
 
-  // returning just the headers and status
+  // Returning just the headers and status
   response.statusCode = 404;
   response.setHeader('X-Powered-By', 'Node');
   response.writeHead(404, { 'X-Powered-By2': 'Node' });
   response.end();
 
-  // returning json data
+  // Returning json data
   const data = {};
   response.setHeader('Content-Type', 'application/json');
   response.status = 200;
@@ -51,7 +52,7 @@ server.on('request', (request: any, response: any) => {
   response.write(serializedJSON);
   response.end();
 
-  // error handling
+  // Error handling
   request.on('error', (err: any) => {
     console.log(err.code);
     console.log(err.message);
@@ -73,8 +74,8 @@ server.on('request', (request: any, response: any) => {
     response.end();
   });
 
-  // file upload with formidable using callbacks
-  const form = newformidable.IncomingForm({
+  // File upload with formidable using callbacks
+  const form = new formidable.IncomingForm({
     uploadDir: __dirname,
     keepExtensions: true,
     multiple: true,
@@ -95,8 +96,7 @@ server.on('request', (request: any, response: any) => {
     response.end('success');
   });
 
-  // file upload with formidable using events
-
+  // File upload with formidable using events
   form
     .parse(request)
     .on('fileBegin', (name: any, file: any) => {
@@ -127,8 +127,8 @@ server.on('request', (request: any, response: any) => {
 
 server.listen(8000);
 
-// making external api calls
-const request = http.get('http://www.google.com', (response) => {
+// Making external api calls
+const request1 = http.get('http://www.google.com', (response) => {
   console.log('status code ' + response.statusCode);
   console.log(response.headers);
 
@@ -137,17 +137,16 @@ const request = http.get('http://www.google.com', (response) => {
     console.log(chunk.toString());
   });
 
-  request.on('error', (err: any) => {
+  request1.on('error', (err: any) => {
     console.log(err);
   });
 });
 
-// making a delete authorized call
+// Making a delete authorized call
+const https = require('https');
 
-const data = require('https');
-
-const data = JSON.stringify({
-  userName: 'fredv100',
+const data1 = JSON.stringify({
+  userName: 'FRED100',
 });
 
 const options = {
@@ -157,7 +156,7 @@ const options = {
   method: 'DELETE',
   header: {
     'Content-Type': 'application/json',
-    'Content-Length': data.length,
+    'Content-Length': data1.length,
     Authorization: Buffer.from('myUsername' + ':' + 'myPassword').toString(
       'base64'
     ),
@@ -174,10 +173,8 @@ const request = https.request(options, (response) => {
   });
 });
 
-// using axios package
-
+// Using axios package
 const axios = require('axios');
-
 axios
   .get('http://www.google.com')
   .then((response: any) => {
@@ -187,7 +184,7 @@ axios
     console.log(error);
   });
 
-// read a file asynchronously
+// Read a file asynchronously
 const { convertCsv } = require('./csv.parse');
 const { readFile } = require('fs');
 
@@ -204,7 +201,7 @@ readFile(
   }
 );
 
-// read a file synchronously
+// Read a file synchronously
 const { readFileSync } = require('fs');
 try {
   const data1 = readFileSync('./data/pultizer-circular-data.csv', 'utf-8');
@@ -213,7 +210,7 @@ try {
   console.log('there was a problem with the file' + err);
 }
 
-// read a file asynchronously without callbacks
+// Read a file asynchronously without callbacks
 const fs = require('fs');
 const { promisify } = require('util');
 
@@ -226,21 +223,28 @@ const read1 = async () => {
 
 read1();
 
-// reading parts of a file (like a large log file) asynchronously
-const { open, read } = require('fs');
+// Reading parts of a file (like a large log file) asynchronously
+(function readingParts() {
+  const { open, read } = require('fs');
 
-open('./data.csv', (err, fileDescriptor) => {
-  const buffer = Buffer.alloc(200);
-  read(fileDescriptor, buffer, 0, buffer.length, 0, (err, count, buff) => {
-    console.table(convertCsv(buff.toString()));
+  open('./data.csv', (err: any, fileDescriptor: any) => {
+    const buffer = Buffer.alloc(200);
+    read(
+      fileDescriptor,
+      buffer,
+      0,
+      buffer.length,
+      0,
+      (err: any, count: any, buff: any) => {
+        console.table(convertCsv(buff.toString()));
+      }
+    );
   });
-});
+})();
 
-// reading parts of a file (like a large log file) synchronously
+// Reading parts of a file (like a large log file) synchronously
 const fd = fs.openSync('./data/app.log');
-
 let count = 0;
-
 do {
   const buffer = Buffer.alloc(200);
   count = fd.readSync(fd, buffer, 0, buffer.length, null);
@@ -249,15 +253,13 @@ do {
 } while (count > 0);
 fd.closeSync(fd);
 
-// writing an entire file
+// Writing an entire file
 const { writeFile } = require('fs');
-
 writeFile('./data/app.log', 'This is a dummy data', (err: any) => {
   err ? console.log(err) : console.log('data has been saved successfully');
 });
 
-// appending to a file (eighther provide flag as 'a' or use appendFile)
-
+// Appending to a file (eighther provide flag as 'a' or use appendFile)
 writeFile(
   './data/app.log',
   'This is a dummy data',
@@ -272,7 +274,7 @@ appendFile('./data/app.log', 'This is a dummy data', (err: any) => {
   err ? console.log(err) : console.log('data has been saved successfully');
 });
 
-// utilizing flags in writeFile (throw an error if file already exists)
+// Utilizing flags in writeFile (throw an error if file already exists)
 // x - exclusive, + - multiple modes, s - synchronous
 // r -read mode, r+ - read and write mode, rs+ - read and write mode synchronously
 // w - write mode, wx - read in exclusive mode, w+ - read and write mode, wx+ -read and write with exclusive
@@ -286,7 +288,7 @@ writeFile(
   }
 );
 
-// writing data into base64 format
+// Writing data into base64 format
 writeFile(
   './data/app.log',
   'This is a dummy data',
@@ -296,7 +298,7 @@ writeFile(
   }
 );
 
-// watching and writing parts of a file
+// Watching and writing parts of a file
 const { closeSync, openSync, readdirSync, watch, writeSync } = require('fs');
 const camelCase = require('camelCase');
 
@@ -314,18 +316,18 @@ watch('./read', () => {
   });
 });
 
-// reading data from stream
+// Reading data from stream
 const { createReadStream } = require('fs');
 
-const stream = createReadStream('./data/app.log', {
+const stream1 = createReadStream('./data/app.log', {
   hightWaterMark: 9550,
   encoding: 'utf8',
 });
 
-stream.on('data', (data: any) => console.log(data));
+stream1.on('data', (data: any) => console.log(data));
 
-// pausing data from a stream
-stream.on('data', (data: any) => {
+// Pausing data from a stream
+stream1.on('data', (data: any) => {
   stream.pause();
   console.log(data);
 
@@ -334,10 +336,8 @@ stream.on('data', (data: any) => {
   }, 2000);
 });
 
-// writing data to a stream
-
+// Writing data to a stream
 const { createWriteStream } = require('fs');
-
 const stream = createReadStream('./data/app.log', {
   highWaterMark: 95,
   encoding: 'utf8',
@@ -346,7 +346,7 @@ const stream = createReadStream('./data/app.log', {
 const writer = createWriteStream('./data/output.log');
 
 let iteration = 0;
-stream.on('data', (data) => {
+stream.on('data', (data: any) => {
   stream.pause();
   console.log(++iteration);
 
