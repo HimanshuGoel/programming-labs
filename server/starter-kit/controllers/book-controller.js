@@ -18,16 +18,17 @@ function bookController(Book) {
 
     // implementing HATEOAS self-documentation
     const returnBooks = books.map((book) => {
-      const newBook = book.toJSON();
-      newBook.links = {};
-      newBook.links.self = `http://${req.headers.host}/api/books/${book.id}`;
-      newBook.links.filterByThisGenre = `http://${req.headers.host}/api/books?genre=${req.book.genre}`;
-      return newBook;
+    //   const newBook = {};
+    //   newBook.links = {};
+    //   newBook.links.self = `http://${req.headers.host}/api/books/${book.id}`;
+    //   newBook.links.filterByThisGenre = `http://${req.headers.host}/api/books?genre=${req.book.genre}`;
+    //   return newBook;
     });
-    const response = {
-      books: returnBooks,
-    };
-    res.json(response);
+    // const response = {
+    //   books: returnBooks,
+    // };
+    res.status(200);
+    res.send('successful');
   }
 
   function getById(req, res) {

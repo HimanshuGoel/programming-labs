@@ -25,10 +25,11 @@ describe('Book Controller Tests:', () => {
       };
 
       const controller = bookController(book);
-      controller.post(req, res);
+      controller.get(req, res);
 
-      res.status.calledWith(400).should.equal(true, `bad request ${res.status.args[0][0]}`);
-      res.send.calledWith('Title is required').should.equal(true);
+      // res.status.calledWith(200).should.equal(true, `bad request ${res.status.args[0][0]}`);
+      res.status.calledWith(200).should.equal(true);
+      res.send.calledWith('successful').should.equal(true);
     });
   });
 });
